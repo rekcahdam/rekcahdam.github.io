@@ -90,7 +90,7 @@
 /* Header */
 
 	#header {
-		background-image: url("https://googledrive.com/host/0B7N2XzieDnfpcjd1cGlHUU9NdVk"), url("https://googledrive.com/host/0B7N2XzieDnfpT2RGTlZtT1NPNVE"), url("https://googledrive.com/host/0B7N2XzieDnfpTjZkS1lMUDEtRHc");
+		background-image: url("https://rekcahdam.github.io/css/images/top-1280.svg"), url("https://rekcahdam.github.io/css/images/overlay.png"), url("https://rekcahdam.github.io/images/header.jpg");
 		background-size: 1280px 184px,						auto,							cover;
 		padding: 3em 0 5em 0;
 	}
@@ -118,7 +118,7 @@
 /* Footer */
 
 	#footer {
-		background-image: url("https://googledrive.com/host/0B7N2XzieDnfpdE4tUHo4eU50dmM");
+		background-image: url("https://rekcahdam.github.io/css/images/bottom-1280.svg");
 		background-size: 1280px 184px;
 		margin-top: -75px;
 		padding: calc(184px + 2em) 0 2em 0;

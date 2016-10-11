@@ -319,7 +319,7 @@
 			-o-transition: opacity 0.25s ease-in-out;
 			-ms-transition: opacity 0.25s ease-in-out;
 			transition: opacity 0.25s ease-in-out;
-			background-image: url("https://googledrive.com/host/0B7N2XzieDnfpT2RGTlZtT1NPNVE");
+			background-image: url("https://rekcahdam.github.io/css/images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;
@@ -745,7 +745,7 @@
 
 	#header {
 		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("https://googledrive.com/host/0B7N2XzieDnfpZUxHSTNPVjRKaGM"), url("https://googledrive.com/host/0B7N2XzieDnfpT2RGTlZtT1NPNVE"), url("https://googledrive.com/host/0B7N2XzieDnfpTjZkS1lMUDEtRHc");
+		background-image: url("https://rekcahdam.github.io/css/images/top-3200.svg"), url("https://rekcahdam.github.io/css/images/overlay.png"), url("https://rekcahdam.github.io/images/header.jpg");
 		background-position: bottom center,					top left,				center center;
 		background-repeat: repeat-x,						repeat,					no-repeat;
 		background-size: 3200px 460px,					auto,					cover;
@@ -835,7 +835,7 @@
 	#footer {
 		background-attachment: scroll;
 		background-color: #c65156;
-		background-image: url("https://googledrive.com/host/0B7N2XzieDnfpWVotMjBCMlYxT0E");
+		background-image: url("https://rekcahdam.github.io/css/images/bottom-3200.svg");
 		background-position: top center;
 		background-repeat: repeat-x;
 		background-size: 3200px 460px;
