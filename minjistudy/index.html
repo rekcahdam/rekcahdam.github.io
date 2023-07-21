@@ -1,0 +1,346 @@
+<html>
+<style>
+
+body {background-color: pink;}
+.block {
+  display: block;
+  width: 100%;
+  height:50%;
+  border: none;
+  background-color: #4F4A85;
+  color: white;
+  padding: 14px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+
+  background-color: #F8E8EE;
+  color: black;
+}
+
+
+.lesson {
+  display: block;
+  width: 50%;
+  border: none;
+  background-color: #4F4A85;
+  color: white;
+  padding: 28px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.lesson:hover {
+
+  background-color: #F8E8EE;
+  color: black;
+}
+
+.txtlesson {
+  display: block;
+  width: 50%;
+  border: none;
+  background-color: #F8E8EE;
+  color: white;
+  padding: 28px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.txtlesson:hover {
+
+  background-color: #F8E8EE;
+  color: black;
+}
+</style>
+<div id="waveform">
+  <!-- the waveform will be rendered here -->
+</div>
+<div id="buttons" style="display: flex; margin: 1rem 0; gap: 1rem;">
+<button class="block" id="play">
+  Play/pause
+</button>
+<button class="block" id="backward">Reverse</button>
+<button class="block" id="forward">Forward</button>
+<a href="/" class="block">Lessons</a> 
+
+
+<label class="block">
+<span id="rate">1.00</span>x
+
+ <!-- 0.25x --> <input type="range" min="0" max="4" step="1" value="2" /> <!--4x -->
+</label>
+<!--
+<label>
+  <input type="checkbox" checked />
+  Preserve pitch
+</label>-->
+</div>
+<div id="buttons2" style="display: flex; margin: 1rem 0; gap: 1rem;">
+
+<a href="/" class="block">Lessons</a> 
+
+</div>
+
+<div id="AudioLessons">
+<center style ="font-size:100px;" >Minji's English<img src ="MinjiEnglish.jpg" style="height:300px; width:300px; opacity:0.6;"/>Study App</center>
+
+<div id="lessonbuttons" style="display: flex; margin: 1rem 0; gap: 1rem;">
+<!--<button class="block" id="audiolesson2">Audio Lessons</button>
+
+<button class="block" id="textlesson2">Text Lessons</button> -->
+<a href="/" class="lesson" id="audiolesson2">Audio Lessons</a> 
+
+<a href="/?myVar1=textlessons" class="lesson" id="textlesson2">Text Lessons</a> 
+</div>
+<center>
+<a href="/?myVar1=unit01" class="lesson">Lesson 1</a> 
+<a href="/?myVar1=unit02" class="lesson">Lesson 2</a> 
+
+<a href="/?myVar1=unit03" class="lesson">Lesson 3</a> 
+
+<a href="/?myVar1=unit04" class="lesson">Lesson 4</a> 
+
+<a href="/?myVar1=unit05" class="lesson">Lesson 5</a> 
+
+<a href="/?myVar1=unit06" class="lesson">Lesson 6</a> 
+
+<a href="/?myVar1=unit07" class="lesson">Lesson 7</a> 
+
+
+<a href="/?myVar1=unit08" class="lesson">Lesson 8</a> 
+<a href="/?myVar1=unit09" class="lesson">Lesson 9</a> 
+
+<a href="/?myVar1=unit10" class="lesson">Lesson 10</a> 
+
+<a href="/?myVar1=unit11" class="lesson">Lesson 11</a> 
+
+<a href="/?myVar1=unit12" class="lesson">Lesson 12</a> 
+
+<a href="/?myVar1=unit13" class="lesson">Lesson 13</a> 
+
+<a href="/?myVar1=unit14" class="lesson">Lesson 14</a> 
+
+
+<a href="/?myVar1=unit15" class="lesson">Lesson 15</a> 
+<a href="/?myVar1=unit16" class="lesson">Lesson 16</a> 
+
+<a href="/?myVar1=unit17" class="lesson">Lesson 17</a> 
+
+<a href="/?myVar1=unit18" class="lesson">Lesson 18</a> 
+
+<a href="/?myVar1=unit19" class="lesson">Lesson 19</a> 
+
+<a href="/?myVar1=unit20" class="lesson">Lesson 20</a> 
+
+<a href="/?myVar1=unit21" class="lesson">Lesson 21</a> 
+
+<a href="/?myVar1=unit22" class="lesson">Lesson 22</a> 
+<a href="/?myVar1=unit23" class="lesson">Lesson 23</a> 
+
+<a href="/?myVar1=unit24" class="lesson">Lesson 24</a> 
+
+<a href="/?myVar1=unit25" class="lesson">Lesson 25</a> 
+
+<a href="/?myVar1=unit26" class="lesson">Lesson 26</a> 
+
+<a href="/?myVar1=unit27" class="lesson">Lesson 27</a> 
+
+<a href="/?myVar1=unit28" class="lesson">Lesson 28</a> 
+
+<a href="/?myVar1=unit29" class="lesson">Lesson 29</a> 
+
+<a href="/?myVar1=unit30" class="lesson">Lesson 30</a> 
+
+</center>
+</div>
+
+<div id="TextLessons">
+<center style ="font-size:100px;" >Minji's English<img src ="MinjiEnglish.jpg" style="height:300px; width:300px; opacity:0.6;"/>Study App</center>
+
+<div id="lessonbuttons2" style="display: flex; margin: 1rem 0; gap: 1rem;">
+
+<a href="/" class="lesson" id="audiolesson2">Audio Lessons</a> 
+
+<a href="/?myVar1=textlessons" class="txtlesson" id="textlesson2" >Text Lessons</a> 
+
+</div>
+<center>
+<a href="/?myVar1=Who_What_When_Where_Why" class="lesson">Who, What, When, Where, and Why</a> 
+<a href="/?myVar1=Days_and_Time" class="lesson">Days and Time</a> 
+
+<a href="/?myVar1=Verbs" class="lesson">Verbs</a> 
+
+<a href="/?myVar1=Verbs_Endings" class="lesson">Verb Endings</a> 
+
+<a href="/?myVar1=Difficult_Words" class="lesson">Difficult Words</a> 
+
+<a href="/?myVar1=Astronomy_Terms" class="lesson">Astronomy</a> 
+
+</center>
+</div>
+
+<center><div id="output" style="overflow-y:scroll; height:50%; width:100%; position:fixed; top:18%; left:0; background:pink;" ></div></center>
+
+<script type="module">
+
+//var qs = new Querystring();
+//var v1 = qs.get("myVar1");
+var v1= parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
+
+var v2 = v1.replace("?myVar1=","") +"";
+console.log("v2 === " + parent.document.URL.indexOf('?'));
+import WaveSurfer from 'unpkg.com_wavesurfer.js@7.0.3_dist_wavesurfer.esm.js'
+
+if(parent.document.URL.indexOf('?') == -1)
+{
+		document.getElementById('buttons').style.display = 'none'; 
+		document.getElementById('buttons2').style.display = 'none'; 
+
+		document.getElementById('waveform').style.display = 'none'; 
+		document.getElementById('output').style.display = 'none'; 
+		document.getElementById('TextLessons').style.display = 'none'; 
+		
+		document.getElementById('audiolesson2').style.background='#F8E8EE';
+
+
+}
+else if(v2 === "textlessons")
+{
+		document.getElementById('buttons').style.display = 'none'; 
+		document.getElementById('buttons2').style.display = 'none'; 
+		document.getElementById('waveform').style.display = 'none'; 
+		document.getElementById('output').style.display = 'none'; 
+		document.getElementById('AudioLessons').style.display = 'none'; 
+		
+		document.getElementById('textlesson2').style.background='#F8E8EE';
+		document.getElementById('audiolesson2').style.background='#F8E8EE';
+
+
+}
+else
+{
+		document.getElementById('AudioLessons').style.display = 'none'; 
+		document.getElementById('TextLessons').style.display = 'none'; 
+	if(v2 === "Who_What_When_Where_Why" || v2 === "Verbs"  || v2 === "Days_and_Time"  || v2 === "Verbs_Endings"  || v2==="Difficult_Words" || v2 === "Astronomy_Terms")
+	{
+		document.getElementById('buttons').style.display = 'none'; 
+		document.getElementById('waveform').style.display = 'none'; 
+		document.getElementById('AudioLessons').style.display = 'none'; 
+		document.getElementById('output').style.top ="10%";
+		document.getElementById('textlesson2').style.display='none';
+		document.getElementById('audiolesson2').style.display='none';
+	
+	}
+	else
+		document.getElementById('buttons2').style.display = 'none'; 
+
+	
+	const wavesurfer = WaveSurfer.create({
+	  container: '#waveform',
+	  waveColor: '#4F4A85',
+	  progressColor: '#383351',
+	  url: '/'+v2+'.mp3',
+	})
+
+	wavesurfer.on('interaction', () => {
+	  wavesurfer.play()
+	})
+
+	let preservePitch = true
+	const speeds = [0.25, 0.5, 1, 2, 4]
+
+	// Set the playback rate
+	document.querySelector('input[type="range"]').addEventListener('input', (e) => {
+	  const speed = speeds[e.target.valueAsNumber]
+	  document.querySelector('#rate').textContent = speed.toFixed(2)
+	  wavesurfer.setPlaybackRate(speed, preservePitch)
+	  wavesurfer.play()
+	})
+
+	// Play/pause
+	document.querySelector('#play').addEventListener('click', () => {
+
+
+	  wavesurfer.playPause()
+	})
+
+	document.querySelector('#forward').addEventListener('click', () => {
+
+
+		wavesurfer.skip(5)
+	})
+
+	document.querySelector('#backward').addEventListener('click', () => {
+
+
+	  wavesurfer.skip(-5)
+	})
+	
+
+
+
+	  //function loadFile(event) {
+	   // event.preventDefault();
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+	  if (xhr.readyState === 4 && xhr.status === 200) {
+		document.getElementById('output').innerHTML = xhr.responseText.replace(/\n/g, '<br>');
+
+
+
+	  }
+	};
+	xhr.open('GET', v2+".txt", true);
+	xhr.send();
+	  //}
+	window.onresize = function(event) {
+	
+	if(v2 !== "Who_What_When_Where_Why" && v2 !== "Verbs"  && v2 !== "Days_and_Time"  && v2 !== "Verbs_Endings"  && v2!=="Difficult_Words" && v2 !== "Astronomy_Terms")
+		{
+			if(window.screen.availHeight  >window.screen.availWidth)
+			{
+			document.getElementById('output').style.top ="18%";
+
+
+			}
+			else
+			{
+			document.getElementById('output').style.top ="50%";
+			}
+			console.log("window.screen.availHeight === " +window.screen.height);
+			console.log("window.screen.availWidth === " +window.screen.width);
+
+		}
+	   // 
+	};
+	if(v2 !== "Who_What_When_Where_Why" && v2 !== "Verbs"  && v2 !== "Days_and_Time"  && v2 !== "Verbs_Endings"  && v2!=="Difficult_Words" && v2 !== "Astronomy_Terms")
+	{
+		if(window.screen.availHeight  >window.screen.availWidth)
+		{
+		document.getElementById('output').style.top ="18%";
+
+
+		}
+		else
+		{
+		document.getElementById('output').style.top ="50%";
+		}
+		
+	}
+	else
+	{
+			document.getElementById('output').style.height ="100%";
+	}
+	
+			document.getElementById('output').style.fontSize ="32px";
+
+
+}
+</script>
+</html>
