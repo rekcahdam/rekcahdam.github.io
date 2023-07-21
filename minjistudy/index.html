@@ -1,5 +1,24 @@
 <html>
 <style>
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: #FF78C4;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF78C4;
+}
+
+/* selected link */
+a:active {
+  color: #FF78C4;
+}
 
 body {background-color: pink;}
 .block {
@@ -17,7 +36,7 @@ body {background-color: pink;}
 
 .block:hover {
 
-  background-color: #F8E8EE;
+  background-color: #FDCEDF;
   color: black;
 }
 
@@ -36,7 +55,7 @@ body {background-color: pink;}
 
 .lesson:hover {
 
-  background-color: #F8E8EE;
+  background-color: #FDCEDF;
   color: black;
 }
 
@@ -44,7 +63,7 @@ body {background-color: pink;}
   display: block;
   width: 50%;
   border: none;
-  background-color: #F8E8EE;
+  background-color: #FDCEDF;
   color: white;
   padding: 28px 28px;
   font-size: 30px;
@@ -54,20 +73,63 @@ body {background-color: pink;}
 
 .txtlesson:hover {
 
-  background-color: #F8E8EE;
+  background-color: #FDCEDF;
   color: black;
 }
+
+    #waveform {
+      cursor: pointer;
+      position: relative;
+    }
+    #hover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      pointer-events: none;
+      height: 100%;
+      width: 0;
+      mix-blend-mode: overlay;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    #waveform:hover #hover {
+      opacity: 1;
+    }
+    #time,
+    #duration {
+      position: absolute;
+      z-index: 11;
+      top: 50%;
+      margin-top: -1px;
+      transform: translateY(-50%);
+      font-size: 15px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 2px;
+      color: #ddd;
+    }
+    #time {
+      left: 0;
+    }
+    #duration {
+      right: 0;
+    }
 </style>
 <div id="waveform">
   <!-- the waveform will be rendered here -->
+  
+   <div id="time">0:00</div>
+    <div id="duration">0:00</div>
+    <div id="hover"></div>
 </div>
 <div id="buttons" style="display: flex; margin: 1rem 0; gap: 1rem;">
 <button class="block" id="play">
-  Play/pause
+  재생/일시 정지
 </button>
-<button class="block" id="backward">Reverse</button>
-<button class="block" id="forward">Forward</button>
-<a href="/" class="block">Lessons</a> 
+<button class="block" id="backward">되감기</button>
+<button class="block" id="forward">빠른 포워</button>
+<a href="/minjistudy/" class="block">강의</a> 
 
 
 <label class="block">
@@ -83,7 +145,7 @@ body {background-color: pink;}
 </div>
 <div id="buttons2" style="display: flex; margin: 1rem 0; gap: 1rem;">
 
-<a href="/minjistudy/" class="block">Lessons</a> 
+<a href="/minjistudy/" class="block">강의</a> 
 
 </div>
 
@@ -94,68 +156,68 @@ body {background-color: pink;}
 <!--<button class="block" id="audiolesson2">Audio Lessons</button>
 
 <button class="block" id="textlesson2">Text Lessons</button> -->
-<a href="/minjistudy/" class="lesson" id="audiolesson2">Audio Lessons</a> 
+<a href="/minjistudy/" class="lesson" id="audiolesson2">오디오 강의</a> 
 
-<a href="/minjistudy/?myVar1=textlessons" class="lesson" id="textlesson2">Text Lessons</a> 
+<a href="/minjistudy/?myVar1=textlessons" class="lesson" id="textlesson2">텍스트 강의</a> 
 </div>
 <center>
-<a href="/minjistudy/?myVar1=unit01" class="lesson">Lesson 1</a> 
-<a href="/minjistudy/?myVar1=unit02" class="lesson">Lesson 2</a> 
+<a href="/minjistudy/?myVar1=unit01" class="lesson">오디오 강의 1</a> 
+<a href="/minjistudy/?myVar1=unit02" class="lesson">오디오 강의 2</a> 
 
-<a href="/minjistudy/?myVar1=unit03" class="lesson">Lesson 3</a> 
+<a href="/minjistudy/?myVar1=unit03" class="lesson">오디오 강의 3</a> 
 
-<a href="/minjistudy/?myVar1=unit04" class="lesson">Lesson 4</a> 
+<a href="/minjistudy/?myVar1=unit04" class="lesson">오디오 강의 4</a> 
 
-<a href="/minjistudy/?myVar1=unit05" class="lesson">Lesson 5</a> 
+<a href="/minjistudy/?myVar1=unit05" class="lesson">오디오 강의 5</a> 
 
-<a href="/minjistudy/?myVar1=unit06" class="lesson">Lesson 6</a> 
+<a href="/minjistudy/?myVar1=unit06" class="lesson">오디오 강의 6</a> 
 
-<a href="/minjistudy/?myVar1=unit07" class="lesson">Lesson 7</a> 
-
-
-<a href="/minjistudy/?myVar1=unit08" class="lesson">Lesson 8</a> 
-<a href="/minjistudy/?myVar1=unit09" class="lesson">Lesson 9</a> 
-
-<a href="/minjistudy/?myVar1=unit10" class="lesson">Lesson 10</a> 
-
-<a href="/minjistudy/?myVar1=unit11" class="lesson">Lesson 11</a> 
-
-<a href="/minjistudy/?myVar1=unit12" class="lesson">Lesson 12</a> 
-
-<a href="/minjistudy/?myVar1=unit13" class="lesson">Lesson 13</a> 
-
-<a href="/minjistudy/?myVar1=unit14" class="lesson">Lesson 14</a> 
+<a href="/minjistudy/?myVar1=unit07" class="lesson">오디오 강의 7</a> 
 
 
-<a href="/minjistudy/?myVar1=unit15" class="lesson">Lesson 15</a> 
-<a href="/minjistudy/?myVar1=unit16" class="lesson">Lesson 16</a> 
+<a href="/minjistudy/?myVar1=unit08" class="lesson">오디오 강의 8</a> 
+<a href="/minjistudy/?myVar1=unit09" class="lesson">오디오 강의 9</a> 
 
-<a href="/minjistudy/?myVar1=unit17" class="lesson">Lesson 17</a> 
+<a href="/minjistudy/?myVar1=unit10" class="lesson">오디오 강의 10</a> 
 
-<a href="/minjistudy/?myVar1=unit18" class="lesson">Lesson 18</a> 
+<a href="/minjistudy/?myVar1=unit11" class="lesson">오디오 강의 11</a> 
 
-<a href="/minjistudy/?myVar1=unit19" class="lesson">Lesson 19</a> 
+<a href="/minjistudy/?myVar1=unit12" class="lesson">오디오 강의 12</a> 
 
-<a href="/minjistudy/?myVar1=unit20" class="lesson">Lesson 20</a> 
+<a href="/minjistudy/?myVar1=unit13" class="lesson">오디오 강의 13</a> 
 
-<a href="/minjistudy/?myVar1=unit21" class="lesson">Lesson 21</a> 
+<a href="/minjistudy/?myVar1=unit14" class="lesson">오디오 강의 14</a> 
 
-<a href="/minjistudy/?myVar1=unit22" class="lesson">Lesson 22</a> 
-<a href="/minjistudy/?myVar1=unit23" class="lesson">Lesson 23</a> 
 
-<a href="/minjistudy/?myVar1=unit24" class="lesson">Lesson 24</a> 
+<a href="/minjistudy/?myVar1=unit15" class="lesson">오디오 강의 15</a> 
+<a href="/minjistudy/?myVar1=unit16" class="lesson">오디오 강의 16</a> 
 
-<a href="/minjistudy/?myVar1=unit25" class="lesson">Lesson 25</a> 
+<a href="/minjistudy/?myVar1=unit17" class="lesson">오디오 강의 17</a> 
 
-<a href="/minjistudy/?myVar1=unit26" class="lesson">Lesson 26</a> 
+<a href="/minjistudy/?myVar1=unit18" class="lesson">오디오 강의 18</a> 
 
-<a href="/minjistudy/?myVar1=unit27" class="lesson">Lesson 27</a> 
+<a href="/minjistudy/?myVar1=unit19" class="lesson">오디오 강의 19</a> 
 
-<a href="/minjistudy/?myVar1=unit28" class="lesson">Lesson 28</a> 
+<a href="/minjistudy/?myVar1=unit20" class="lesson">오디오 강의 20</a> 
 
-<a href="/minjistudy/?myVar1=unit29" class="lesson">Lesson 29</a> 
+<a href="/minjistudy/?myVar1=unit21" class="lesson">오디오 강의 21</a> 
 
-<a href="/minjistudy/?myVar1=unit30" class="lesson">Lesson 30</a> 
+<a href="/minjistudy/minjistudy/?myVar1=unit22" class="lesson">오디오 강의 22</a> 
+<a href="/minjistudy/?myVar1=unit23" class="lesson">오디오 강의 23</a> 
+
+<a href="/minjistudy/?myVar1=unit24" class="lesson">오디오 강의 24</a> 
+
+<a href="/minjistudy/?myVar1=unit25" class="lesson">오디오 강의 25</a> 
+
+<a href="/minjistudy/?myVar1=unit26" class="lesson">오디오 강의 26</a> 
+
+<a href="/minjistudy/?myVar1=unit27" class="lesson">오디오 강의 27</a> 
+
+<a href="/minjistudy/?myVar1=unit28" class="lesson">오디오 강의 28</a> 
+
+<a href="/minjistudy/?myVar1=unit29" class="lesson">오디오 강의 29</a> 
+
+<a href="/minjistudy/?myVar1=unit30" class="lesson">오디오 강의 30</a> 
 
 </center>
 </div>
@@ -165,22 +227,22 @@ body {background-color: pink;}
 
 <div id="lessonbuttons2" style="display: flex; margin: 1rem 0; gap: 1rem;">
 
-<a href="/minjistudy/" class="lesson" id="audiolesson2">Audio Lessons</a> 
+<a href="/minjistudy/" class="lesson" id="audiolesson2">오디오 강의</a> 
 
-<a href="/minjistudy/?myVar1=textlessons" class="txtlesson" id="textlesson2" >Text Lessons</a> 
+<a href="/minjistudy/?myVar1=textlessons" class="lesson" id="textlesson2">텍스트 강의</a> 
 
 </div>
 <center>
-<a href="/minjistudy/?myVar1=Who_What_When_Where_Why" class="lesson">Who, What, When, Where, and Why</a> 
-<a href="/minjistudy/?myVar1=Days_and_Time" class="lesson">Days and Time</a> 
+<a href="/minjistudy/?myVar1=Who_What_When_Where_Why" class="lesson">질문</a> 
+<a href="/minjistudy/?myVar1=Days_and_Time" class="lesson">요일 및 시간</a> 
 
-<a href="/minjistudy/?myVar1=Verbs" class="lesson">Verbs</a> 
+<a href="/minjistudy/?myVar1=Verbs" class="lesson">동사</a> 
 
-<a href="/minjistudy/?myVar1=Verbs_Endings" class="lesson">Verb Endings</a> 
+<a href="/minjistudy/?myVar1=Verbs_Endings" class="lesson">동사 어미</a> 
 
-<a href="/minjistudy/?myVar1=Difficult_Words" class="lesson">Difficult Words</a> 
+<a href="/minjistudy/?myVar1=Difficult_Words" class="lesson">어려운 단어</a> 
 
-<a href="/minjistudy/?myVar1=Astronomy_Terms" class="lesson">Astronomy</a> 
+<a href="/minjistudy/?myVar1=Astronomy_Terms" class="lesson">천문학</a> 
 
 </center>
 </div>
@@ -196,7 +258,6 @@ var v1= parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.d
 var v2 = v1.replace("?myVar1=","") +"";
 console.log("v2 === " + parent.document.URL.indexOf('?'));
 import WaveSurfer from '/minjistudy/unpkg.com_wavesurfer.js@7.0.3_dist_wavesurfer.esm.js'
-
 if(parent.document.URL.indexOf('?') == -1)
 {
 		document.getElementById('buttons').style.display = 'none'; 
@@ -206,7 +267,7 @@ if(parent.document.URL.indexOf('?') == -1)
 		document.getElementById('output').style.display = 'none'; 
 		document.getElementById('TextLessons').style.display = 'none'; 
 		
-		document.getElementById('audiolesson2').style.background='#F8E8EE';
+		document.getElementById('audiolesson2').style.background='#FDCEDF';
 
 
 }
@@ -218,8 +279,8 @@ else if(v2 === "textlessons")
 		document.getElementById('output').style.display = 'none'; 
 		document.getElementById('AudioLessons').style.display = 'none'; 
 		
-		document.getElementById('textlesson2').style.background='#F8E8EE';
-		document.getElementById('audiolesson2').style.background='#F8E8EE';
+		document.getElementById('textlesson2').style.background='#FDCEDF';
+		document.getElementById('audiolesson2').style.background='#FDCEDF';
 
 
 }
@@ -244,7 +305,7 @@ else
 	const wavesurfer = WaveSurfer.create({
 	  container: '#waveform',
 	  waveColor: '#4F4A85',
-	  progressColor: '#383351',
+	  progressColor: 'white',
 	  url: '/minjistudy/'+v2+'.mp3',
 	})
 
@@ -340,7 +401,29 @@ else
 	
 			document.getElementById('output').style.fontSize ="32px";
 
-
+// Hover effect
+{
+  const hover = document.querySelector('#hover')
+  const waveform = document.querySelector('#waveform')
+  waveform.addEventListener('pointermove', (e) => (hover.style.width = `${e.offsetX}px`))
 }
+
+// Current time & duration
+{
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60)
+    const secondsRemainder = Math.round(seconds) % 60
+    const paddedSeconds = `0${secondsRemainder}`.slice(-2)
+    return `${minutes}:${paddedSeconds}`
+  }
+
+  const timeEl = document.querySelector('#time')
+  const durationEl = document.querySelector('#duration')
+  wavesurfer.on('decode', (duration) => (durationEl.textContent = formatTime(duration)))
+  wavesurfer.on('timeupdate', (currentTime) => (timeEl.textContent = formatTime(currentTime)))
+}
+}
+
+
 </script>
 </html>
